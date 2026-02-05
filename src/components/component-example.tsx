@@ -1,6 +1,3 @@
-import * as React from 'react'
-
-import { HugeiconsIcon } from '@hugeicons/react'
 import {
   BluetoothIcon,
   CodeIcon,
@@ -31,6 +28,9 @@ import {
   SunIcon,
   UserIcon,
 } from '@hugeicons/core-free-icons'
+
+import { HugeiconsIcon } from '@hugeicons/react'
+import * as React from 'react'
 import { Example, ExampleWrapper } from '@/components/example'
 import {
   AlertDialog,
@@ -46,15 +46,7 @@ import {
 } from '@/components/ui/alert-dialog'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
+import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import {
   Combobox,
   ComboboxContent,
@@ -82,14 +74,7 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { Field, FieldGroup, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
 
 export function ComponentExample() {
@@ -108,26 +93,21 @@ function CardExample() {
         <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />
         <img
           src="https://images.unsplash.com/photo-1604076850742-4c7221f3101b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Photo by mymind on Unsplash"
+          alt="card background"
           title="Photo by mymind on Unsplash"
           className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale"
         />
         <CardHeader>
           <CardTitle>Observability Plus is replacing Monitoring</CardTitle>
           <CardDescription>
-            Switch to the improved way to explore your data, with natural
-            language. Monitoring will no longer be available on the Pro plan in
-            November, 2025
+            Switch to the improved way to explore your data, with natural language. Monitoring will no longer be
+            available on the Pro plan in November, 2025
           </CardDescription>
         </CardHeader>
         <CardFooter>
           <AlertDialog>
             <AlertDialogTrigger render={<Button />}>
-              <HugeiconsIcon
-                icon={PlusSignIcon}
-                strokeWidth={2}
-                data-icon="inline-start"
-              />
+              <HugeiconsIcon icon={PlusSignIcon} strokeWidth={2} data-icon="inline-start" />
               Show Dialog
             </AlertDialogTrigger>
             <AlertDialogContent size="sm">
@@ -137,8 +117,7 @@ function CardExample() {
                 </AlertDialogMedia>
                 <AlertDialogTitle>Allow accessory to connect?</AlertDialogTitle>
                 <AlertDialogDescription>
-                  Do you want to allow the USB accessory to connect to this
-                  device?
+                  Do you want to allow the USB accessory to connect to this device?
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
@@ -156,13 +135,7 @@ function CardExample() {
   )
 }
 
-const frameworks = [
-  'Next.js',
-  'SvelteKit',
-  'Nuxt.js',
-  'Remix',
-  'Astro',
-] as const
+const frameworks = ['Next.js', 'SvelteKit', 'Nuxt.js', 'Remix', 'Astro'] as const
 
 const roleItems = [
   { label: 'Developer', value: 'developer' },
@@ -187,13 +160,8 @@ function FormExample() {
           <CardDescription>Please fill in your details below</CardDescription>
           <CardAction>
             <DropdownMenu>
-              <DropdownMenuTrigger
-                render={<Button variant="ghost" size="icon" />}
-              >
-                <HugeiconsIcon
-                  icon={MoreVerticalCircle01Icon}
-                  strokeWidth={2}
-                />
+              <DropdownMenuTrigger render={<Button variant="ghost" size="icon" />}>
+                <HugeiconsIcon icon={MoreVerticalCircle01Icon} strokeWidth={2} />
                 <span className="sr-only">More options</span>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56">
@@ -228,26 +196,17 @@ function FormExample() {
                           </DropdownMenuItem>
                           <DropdownMenuSub>
                             <DropdownMenuSubTrigger>
-                              <HugeiconsIcon
-                                icon={MoreHorizontalCircle01Icon}
-                                strokeWidth={2}
-                              />
+                              <HugeiconsIcon icon={MoreHorizontalCircle01Icon} strokeWidth={2} />
                               More Projects
                             </DropdownMenuSubTrigger>
                             <DropdownMenuPortal>
                               <DropdownMenuSubContent>
                                 <DropdownMenuItem>
-                                  <HugeiconsIcon
-                                    icon={CodeIcon}
-                                    strokeWidth={2}
-                                  />
+                                  <HugeiconsIcon icon={CodeIcon} strokeWidth={2} />
                                   Project Gamma
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
-                                  <HugeiconsIcon
-                                    icon={CodeIcon}
-                                    strokeWidth={2}
-                                  />
+                                  <HugeiconsIcon icon={CodeIcon} strokeWidth={2} />
                                   Project Delta
                                 </DropdownMenuItem>
                               </DropdownMenuSubContent>
@@ -312,10 +271,7 @@ function FormExample() {
                       <DropdownMenuSubContent>
                         <DropdownMenuGroup>
                           <DropdownMenuLabel>Appearance</DropdownMenuLabel>
-                          <DropdownMenuRadioGroup
-                            value={theme}
-                            onValueChange={setTheme}
-                          >
+                          <DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
                             <DropdownMenuRadioItem value="light">
                               <HugeiconsIcon icon={SunIcon} strokeWidth={2} />
                               Light
@@ -325,10 +281,7 @@ function FormExample() {
                               Dark
                             </DropdownMenuRadioItem>
                             <DropdownMenuRadioItem value="system">
-                              <HugeiconsIcon
-                                icon={ComputerIcon}
-                                strokeWidth={2}
-                              />
+                              <HugeiconsIcon icon={ComputerIcon} strokeWidth={2} />
                               System
                             </DropdownMenuRadioItem>
                           </DropdownMenuRadioGroup>
@@ -359,33 +312,22 @@ function FormExample() {
                         <DropdownMenuGroup>
                           <DropdownMenuLabel>Preferences</DropdownMenuLabel>
                           <DropdownMenuItem>
-                            <HugeiconsIcon
-                              icon={KeyboardIcon}
-                              strokeWidth={2}
-                            />
+                            <HugeiconsIcon icon={KeyboardIcon} strokeWidth={2} />
                             Keyboard Shortcuts
                           </DropdownMenuItem>
                           <DropdownMenuItem>
-                            <HugeiconsIcon
-                              icon={LanguageCircleIcon}
-                              strokeWidth={2}
-                            />
+                            <HugeiconsIcon icon={LanguageCircleIcon} strokeWidth={2} />
                             Language
                           </DropdownMenuItem>
                           <DropdownMenuSub>
                             <DropdownMenuSubTrigger>
-                              <HugeiconsIcon
-                                icon={NotificationIcon}
-                                strokeWidth={2}
-                              />
+                              <HugeiconsIcon icon={NotificationIcon} strokeWidth={2} />
                               Notifications
                             </DropdownMenuSubTrigger>
                             <DropdownMenuPortal>
                               <DropdownMenuSubContent>
                                 <DropdownMenuGroup>
-                                  <DropdownMenuLabel>
-                                    Notification Types
-                                  </DropdownMenuLabel>
+                                  <DropdownMenuLabel>Notification Types</DropdownMenuLabel>
                                   <DropdownMenuCheckboxItem
                                     checked={notifications.push}
                                     onCheckedChange={(checked) =>
@@ -395,10 +337,7 @@ function FormExample() {
                                       })
                                     }
                                   >
-                                    <HugeiconsIcon
-                                      icon={NotificationIcon}
-                                      strokeWidth={2}
-                                    />
+                                    <HugeiconsIcon icon={NotificationIcon} strokeWidth={2} />
                                     Push Notifications
                                   </DropdownMenuCheckboxItem>
                                   <DropdownMenuCheckboxItem
@@ -410,10 +349,7 @@ function FormExample() {
                                       })
                                     }
                                   >
-                                    <HugeiconsIcon
-                                      icon={MailIcon}
-                                      strokeWidth={2}
-                                    />
+                                    <HugeiconsIcon icon={MailIcon} strokeWidth={2} />
                                     Email Notifications
                                   </DropdownMenuCheckboxItem>
                                 </DropdownMenuGroup>
@@ -461,11 +397,7 @@ function FormExample() {
               <div className="grid grid-cols-2 gap-4">
                 <Field>
                   <FieldLabel htmlFor="small-form-name">Name</FieldLabel>
-                  <Input
-                    id="small-form-name"
-                    placeholder="Enter your name"
-                    required
-                  />
+                  <Input id="small-form-name" placeholder="Enter your name" required />
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="small-form-role">Role</FieldLabel>
@@ -486,15 +418,9 @@ function FormExample() {
                 </Field>
               </div>
               <Field>
-                <FieldLabel htmlFor="small-form-framework">
-                  Framework
-                </FieldLabel>
+                <FieldLabel htmlFor="small-form-framework">Framework</FieldLabel>
                 <Combobox items={frameworks}>
-                  <ComboboxInput
-                    id="small-form-framework"
-                    placeholder="Select a framework"
-                    required
-                  />
+                  <ComboboxInput id="small-form-framework" placeholder="Select a framework" required />
                   <ComboboxContent>
                     <ComboboxEmpty>No frameworks found.</ComboboxEmpty>
                     <ComboboxList>
@@ -509,10 +435,7 @@ function FormExample() {
               </Field>
               <Field>
                 <FieldLabel htmlFor="small-form-comments">Comments</FieldLabel>
-                <Textarea
-                  id="small-form-comments"
-                  placeholder="Add any additional comments"
-                />
+                <Textarea id="small-form-comments" placeholder="Add any additional comments" />
               </Field>
               <Field orientation="horizontal">
                 <Button type="submit">Submit</Button>

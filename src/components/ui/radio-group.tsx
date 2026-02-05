@@ -1,18 +1,11 @@
 import { Radio as RadioPrimitive } from '@base-ui/react/radio'
 import { RadioGroup as RadioGroupPrimitive } from '@base-ui/react/radio-group'
-
-import { HugeiconsIcon } from '@hugeicons/react'
 import { CircleIcon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import { cn } from '@/lib/utils'
 
 function RadioGroup({ className, ...props }: RadioGroupPrimitive.Props) {
-  return (
-    <RadioGroupPrimitive
-      data-slot="radio-group"
-      className={cn('grid w-full gap-3', className)}
-      {...props}
-    />
-  )
+  return <RadioGroupPrimitive data-slot="radio-group" className={cn('grid w-full gap-3', className)} {...props} />
 }
 
 function RadioGroupItem({ className, ...props }: RadioPrimitive.Root.Props) {
